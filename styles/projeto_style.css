@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Oswald&display=swap');
+
+:root {
+    --cor-primaria: #000;
+    --cor-segundaria: #0fffff;
+    --cor-terciaria: white;
+    --cor-hover: #272727;
+    
+    --fonte-primaria: 'Oswald', sans-serif;
+    --fonte-secundaria: 'Nanum Myeongjo', serif;
+}
+
+.painel {
+ width: 60vw;
+ height: 60vh;
+ /* background-color: brown; */
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-template-rows: 1fr 1fr 1fr;
+ grid-gap: 30px;
+}
+
+.painel_itens {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: rgb(45, 49, 53);
+    border-radius: 5%;
+    position: relative;
+}
+
+.painel_itens_faixa {
+    position: absolute;
+    background-color: var(--cor-segundaria);
+    top: 40%;
+    right: -16px;
+    padding: 5px 10px;
+    color: var(--cor-primaria);
+    font: var(--fonte-secundaria);
+    font-size: 1.5rem;
+}
+
+.painel_itens_faixa::after {
+    position: absolute;
+    content: '';
+    bottom: -6px;
+    right: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-top-width: 3px;
+    border-left-width: 8px;
+    border-bottom-width: 3px;
+    border-right-width: 8px;
+    border-top-color: var(--cor-segundaria);
+    border-left-color: var(--cor-segundaria);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    filter: brightness(50%);
+}
